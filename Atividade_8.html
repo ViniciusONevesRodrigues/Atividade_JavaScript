@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jokenpo</title>
+    <link rel="stylesheet" type="text/css" href="css/styles2.css">
+  </head>
+  <body>
+    <h1>Jokenpo</h1>
+    <div class="game">
+      <div class="player">
+        <h2>Você</h2>
+        <div class="choices">
+          <img class="choice" id="pedra" src="img/pedra-papel-tesoura (2).png" onclick="chose1()" alt="Pedra">
+          <img class="choice" id="papel" src="img/pedra-papel-tesoura (3).png" onclick="chose2()"alt="Papel">
+          <img class="choice" id="tesoura" src="img/pedra-papel-tesoura (4).png" onclick="chose3()"alt="Tesoura">
+        </div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="computer">
+        <h2>Computador</h2>
+        <div class="choices">
+          <img class="choice" id="computer-choice1" src="img/pedra-papel-tesoura (2).png" alt="Escolha do computador">
+          <img class="choice" id="computer-choice2" src="img/pedra-papel-tesoura (3).png" alt="Escolha do computador">
+          <img class="choice" id="computer-choice3" src="img/pedra-papel-tesoura (4).png" alt="Escolha do computador">
+        </div>
+      </div>
+    </div>
+    <div class="result">
+      <h2 id="result-text"></h2>
+    </div>
+    <script src="js/jokenpo.js"></script>
+  </body>
+</html>

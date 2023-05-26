@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 6</title>
+    <link rel="stylesheet" href="css/atividade.css">
+</head>
+<body>
+    <h2>Coloque seu sexo e altura para calcular o seu peso ideal:</h2>
+    Sexo: <select name="sexo" id="se">
+        <option name="sexoValue" value="0" selected>Masculino</option>
+        <option name="sexoValue" value="1">Feminino</option>
+    </select>
+    Altura: <input type="text" id="al">
+    <button onclick="calcular()">calcular</button>
+    <div id="resultado"></div>
+</body>
+    <script>
+        calcular = () => {
+        let sexo = document.getElementById("se");
+        let select;
+        for (let i=0;i<sexo.length;i++){
+            if (sexo[i].selected) {
+                select = sexo[i].value
+            }
+        }
+        let al = document.getElementById("al").value;
+        if (select === "0"){
+            let cal = parseFloat(72.7 * al) - 58;
+           document.getElementById("resultado").innerHTML = `O seu peso ideal é ${cal}` 
+        }else {
+            let cal = parseFloat(62.1 * al) - 44.7;
+            document.getElementById("resultado").innerHTML = `O seu peso ideal é ${cal}` 
+        }
+        }
+    </script>
+</html>

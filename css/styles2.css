@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, rgb(2, 2, 144), rgb(248, 248, 248));
+  }  
+  
+  h1 {
+    margin: 20px 0;
+  }
+  
+  .game {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .player,
+  .computer {
+    width: 200px;
+  }
+  
+  .player h2,
+  .computer h2 {
+    margin: 10px 0;
+  }
+  
+  .result {
+    margin-bottom: 20px;
+  }
+  
+  .choices {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+  }
+  
+  .choice {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+  
+  #choice {
+    width: 150px;
+    height: 150px;
+  }
+  
+  #result-text {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  #start-game {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  

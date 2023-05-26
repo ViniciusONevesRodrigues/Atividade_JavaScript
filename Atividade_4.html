@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <link rel="stylesheet" href="css/atividade.css">
+</head>
+<body>
+    <h2>Coloque a quilometragem percorrida por um determinado veículo e o valor do combustível, para receber o gasto dele: </h2>
+    KM: <input type="text" id="km">
+    Valor do combustivel <input type="text" id="valcomb">
+    <button onclick="calculo()">Calcular</button><br><br>
+    <div id="resultado"></div>
+    <script>
+        calculo = () => {
+        let km = parseFloat(document.getElementById("km").value);
+        let valcomb = parseFloat(document.getElementById("valcomb").value);
+        let resultado = (km / 8) * valcomb;
+        document.getElementById("resultado").innerHTML = `O valor total gasto é R$ ${resultado.toFixed(2)}`;
+    }
+    </script>
+</body>
+</html>

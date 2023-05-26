@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 2</title>
+    <link rel="stylesheet" href="css/atividade.css">
+</head>
+<body>
+    <h2>Converta Fareheint em Celsius ou Celsius em Fareheint:</h2>
+    <input type="text" id="s" autofocus>
+    <select name="temp" id="temp">
+        <option name="tempValues" value="0" selected>°F</option>
+        <option name="tempValues" value="1">°C</option>
+    </select>
+    <button onclick="converter();">converter</button>
+    <div id="resultado">
+
+    </div>
+    <script>
+            converter = () => { 
+                let temp = document.getElementsByName("tempValues");
+                let val;
+                for (let i=0;i<temp.length;i++) {
+                    if (temp[i].selected) {
+                        val = temp[i].value;
+                    }
+                }
+                let s = document.getElementById("s").value;
+                if (val === '0') {
+                    let resultado =  parseFloat(parseFloat(s - 32 ) / 1.8);
+                    document.getElementById("resultado").innerHTML = `${s}°F -> ${resultado}°C`;
+                } else {
+                    let resultado = parseFloat(parseFloat(s) * 1.8 + 32);
+                    document.getElementById("resultado").innerHTML = `${s}°C -> ${resultado}°F`;
+                }
+            }
+    </script>
+</body>
+</html>

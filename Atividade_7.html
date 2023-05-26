@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 7</title>
+    <link rel="stylesheet" href="css/atividade.css">
+</head>
+<body>
+    <h2>Coloque valores entre vírgula e depois use os botões para ver os valores, mostrar o maior e mostrar o menor:</h2>
+    <input name="valor" id="val">
+    <button onclick="ValInserido()">Mostrar valores</button>
+    <button onclick="ValMaior()">Mostrar maior valor</button>
+    <button onclick="ValMenor()">Mostrar menor valor</button>
+    <br><br>
+    <div id="resp"></div>
+    <script>
+        ValInserido = () => {
+            let Ival = document.getElementById("val").value;
+            let vetor = Ival.split(",").map(Number);
+            document.getElementById("resp").innerHTML = "Os valores digitados são: " + vetor.join(" - ");
+        }
+        ValMaior = () => {
+            let Ival = document.getElementById("val").value;
+            let vetor = Ival.split(",").map(Number);
+            let maiorValor =  Math.max(...vetor);
+            document.getElementById("resp").innerHTML = "O maior valor é " + maiorValor;
+        }
+        ValMenor = () => {
+            let Ival = document.getElementById("val").value;
+            let vetor = Ival.split(",").map(Number);
+            let menorValor = Math.min(...vetor);
+            document.getElementById("resp").innerHTML = "O menor valor é " + menorValor;
+        }
+    </script>
+</body>
+</html>

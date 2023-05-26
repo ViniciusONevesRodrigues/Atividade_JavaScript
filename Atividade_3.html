@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 3</title>
+    <link rel="stylesheet" href="css/atividade.css">
+</head>
+<body>
+    <h2>Coloque o nome, o valor e a quantidade vendida de três produtos, para receber o valor total da venda:</h2>
+    Nome 1:<input type="text" id="nome"> Valor 1:<input type="text" id="valor"> Quantidade 1:<input type="text" id="quantidade"><br><br>
+    Nome 2:<input type="text" id="nome2"> Valor 2:<input type="text" id="valor2"> Quantidade 2:<input type="text" id="quantidade2"><br><br>
+    Nome 3:<input type="text" id="nome3"> Valor 3:<input type="text" id="valor3"> Quantidade 3:<input type="text" id="quantidade3"><br><br>
+    <button onclick="resultado()">Calcular</button><br><br>
+    <div id="resultado"></div><br><br>
+    <div id="resultado2"></div><br><br>
+    <div id="resultado3"></div>
+</body>
+    <script>
+        resultado = () => {
+            let val1 = document.getElementById("valor").value;
+            let qua1 = document.getElementById("quantidade").value;
+            let no1 = document.getElementById("nome").value;
+            document.getElementById("resultado").innerHTML = `${no1} = ${val1 * qua1}R$`;
+
+            let val2 = document.getElementById("valor2").value;
+            let qua2 = document.getElementById("quantidade2").value;
+            let no2 = document.getElementById("nome2").value;
+            document.getElementById("resultado2").innerHTML = `${no2} = ${val2 * qua2}R$`;
+
+            let val3 = document.getElementById("valor3").value;
+            let qua3 = document.getElementById("quantidade3").value;
+            let no3 = document.getElementById("nome3").value;
+            document.getElementById("resultado3").innerHTML = `${no3} = ${val3 * qua3}R$`;
+        }
+    </script>
+</html>
